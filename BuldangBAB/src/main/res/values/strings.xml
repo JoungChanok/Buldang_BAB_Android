@@ -1,0 +1,35 @@
+<resources>
+    <!-- 앱 이름 -->
+    <string name="app_name">BAB</string>
+
+    <!-- 급식 -->
+    <string name="today">TODAY</string>
+    <string name="not_today"> </string>
+    <string name="today_lunch">L U N C H</string>
+    <string name="today_dinner">D I N N E R</string>
+    <string name="today_kcal">K C A L</string>
+    <string name="no_data_lunch">There is empty lunch.</string>
+    <string name="no_data_dinner">There is empty dinner.</string>
+
+    <!-- 급식 공유 -->
+    <string name="shareBap_title">Tell friends to meal</string>
+    <string name="shareBap_message_msg">
+        %1$s meal list
+        \n\n[Lunch]
+        \n%2$s
+        \n\n[Kcal]
+        \n%3$s Kcal
+        \n\n[Dinner]
+        \n%4$s
+        \n\n[Kcal]
+        \n%5$s Kcal
+        \n\n%6$s</string>
+
+    <!--메뉴-->
+    <string name="another_day">On another day?</string>
+
+    <!--오류-->
+    <string name="no_network_title">No internet connection</string>
+    <string name="no_network_msg">I can not download data because I can not connect to the internet.</string>
+
+</resources>

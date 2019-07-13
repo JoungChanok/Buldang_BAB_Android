@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    //불당밥 색상
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryDark">#4484f6</color>
+    <color name="colorAccent">#242424</color>
+
+    <color name="white">#FFFFFF</color>
+
+    <color name="today">#ffad27</color>
+
+    //폰트 색상
+    <color name="text_highlight">#242424</color>
+
+    <color name="today_text_color">#f8fdfc</color>
+
+    <color name="today_layout_color_lunch">#424242</color>
+    <color name="today_layout_color_dinner">#ff8383</color>
+
+    <color name="layout_2">#242424</color>
+
+</resources>

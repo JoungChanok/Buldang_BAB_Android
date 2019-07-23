@@ -4,4 +4,8 @@
         android:id="@+id/fab_calender"
         android:icon="@drawable/ic_access_time_black_24dp"
         android:title="@string/another_day"/>
+    <!--<item-->
+        <!--android:id="@+id/fab_theme"-->
+        <!--android:icon="@drawable/ic_theme"-->
+        <!--android:title="@string/theme_change"/>-->
 </menu>

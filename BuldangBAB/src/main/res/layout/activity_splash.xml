@@ -2,46 +2,46 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#242424"
+    android:background="@color/background"
+    android:orientation="vertical"
     tools:ignore="MissingPrefix">
 
     <ImageView
         android:id="@+id/appicon"
         android:layout_width="90dp"
         android:layout_height="90dp"
-        app:srcCompat="@drawable/icon"
         android:layout_marginStart="50dp"
         android:layout_marginTop="80dp"
+        app:srcCompat="@drawable/ic_taco"
         tools:ignore="RtlSymmetry" />
 
     <TextView
-        fontPath="fonts/Womby-Regular.ttf"
         android:id="@+id/buldangbab"
+        fontPath="fonts/Womby-Regular.ttf"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/appicon"
-        android:textColor="#ffffff"
-        android:text="BAB."
-        android:textSize="35sp"
-        android:paddingTop="8dp"
         android:paddingStart="60dp"
+        android:paddingTop="8dp"
+        android:text="@string/bab"
+        android:textColor="@color/textColor"
+        android:textSize="35sp"
         tools:ignore="RtlSymmetry" />
 
     <TextView
-        fontPath="fonts/BreezeSans-Thin.ttf"
         android:id="@+id/checkyoursschollmeals"
+        fontPath="fonts/BreezeSans-Thin.ttf"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/buldangbab"
         android:layout_alignParentStart="true"
-        android:textColor="#ffffff"
-        android:text="CHECK YOURS"
-        android:textSize="30sp"
-        android:paddingTop="8dp"
         android:paddingStart="60dp"
+        android:paddingTop="8dp"
+        android:text="@string/check_yours"
+        android:textColor="@color/textColor"
+        android:textSize="30sp"
         tools:ignore="RtlSymmetry" />
 
     <TextView
@@ -50,10 +50,10 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/checkyoursschollmeals"
         android:layout_alignParentStart="true"
-        android:textColor="#ffffff"
-        android:text="MEALS."
-        android:textSize="30sp"
-        android:paddingTop="4dp"
         android:paddingStart="60dp"
+        android:paddingTop="4dp"
+        android:text="@string/meals"
+        android:textColor="@color/textColor"
+        android:textSize="30sp"
         tools:ignore="RtlSymmetry" />
 </RelativeLayout>

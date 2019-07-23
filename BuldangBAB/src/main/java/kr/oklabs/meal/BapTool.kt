@@ -10,12 +10,12 @@ import java.util.Calendar
 import java.util.Locale
 
 internal object BapTool {
-    val bapPreferenceName = "BapData"
+    private const val bapPreferenceName = "BapData"
 
-    fun getBapStringFormat(year: Int, month: Int, day: Int, type: Int): String {
+    private fun getBapStringFormat(year: Int, month: Int, day: Int, type: Int): String {
         var month = month
         month += 1
-        return year.toString() + "-" + month + "-" + day + "-" + type
+        return "$year-$month-$day-$type"
     }
 
     fun saveBapData(mContext: Context, Calender: Array<String>, Lunch: Array<String>, Dinner: Array<String>, Lunch_Kcal: Array<String>, Dinner_Kcal: Array<String>) {

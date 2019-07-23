@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.appcompat.widget.Toolbar
 import android.util.Log
 import android.view.MenuItem
+import android.widget.Toast
 
 import com.wdullaer.materialdatetimepicker.date.DatePickerDialog
 
@@ -36,6 +37,8 @@ class MealActivity : AppCompatActivity() {
 
     private lateinit var mProcessTask: BapDownloadTask
 
+    private var lastTimeBackPressed = System.currentTimeMillis()
+
     private var mCalendar: Calendar? = null
     private var year: Int = 0
     private var month: Int = 0
@@ -50,7 +53,7 @@ class MealActivity : AppCompatActivity() {
         setContentView(R.layout.activity_meal)
 
         val mToolbar = findViewById<Toolbar>(R.id.mToolbar)
-        mToolbar.setLogo(R.drawable.ic_push_notification_small)
+        mToolbar.setLogo(R.drawable.ic_taco)
         mToolbar.titleMarginStart = 70
         setSupportActionBar(mToolbar)
 
@@ -92,7 +95,9 @@ class MealActivity : AppCompatActivity() {
         fabSpeedDial.setMenuListener(object : SimpleMenuListenerAdapter() {
             override fun onMenuItemSelected(menuItem: MenuItem?): Boolean {
 
-                if (menuItem!!.itemId == R.id.fab_calender) { setCalenderBap() }
+                if (menuItem!!.itemId == R.id.fab_calender) {
+                    setCalenderBap()
+                }
                 return false
             }
         })
@@ -134,7 +139,8 @@ class MealActivity : AppCompatActivity() {
                 if (isUpdate && isNetwork) {
 
                     pDialog = SweetAlertDialog(this, SweetAlertDialog.PROGRESS_TYPE)
-                            .apply { progressHelper.barColor = ContextCompat.getColor(this@MealActivity, R.color.text_highlight)
+                            .apply {
+                                progressHelper.barColor = ContextCompat.getColor(this@MealActivity, R.color.textColorPrimary)
                                 titleText = "Loading.."
                                 setCancelable(false)
                                 show()
@@ -153,9 +159,9 @@ class MealActivity : AppCompatActivity() {
             }
             // if day equals today
             if (year == TodayYear && month == TodayMonth && day == TodayDay) {
-                items.add(BapListData(mData.Calender!!, mData.DayOfTheWeek!!, BapTool.replaceString(mData.Lunch!!), mData.Lunch_Kcal!!, BapTool.replaceString(mData.Dinner!!), mData.Dinner_Kcal!!, true))
+                items.add(BapListData(mData.Calender!!, mData.DayOfTheWeek!!, BapTool.replaceString(mData.Lunch!!), mData.Lunch_Kcal!!, BapTool.replaceString(mData.Dinner!!), mData.Dinner_Kcal!!))
             } else {
-                items.add(BapListData(mData.Calender!!, mData.DayOfTheWeek!!, BapTool.replaceString(mData.Lunch!!), mData.Lunch_Kcal!!, BapTool.replaceString(mData.Dinner!!), mData.Dinner_Kcal!!, false))
+                items.add(BapListData(mData.Calender!!, mData.DayOfTheWeek!!, BapTool.replaceString(mData.Lunch!!), mData.Lunch_Kcal!!, BapTool.replaceString(mData.Dinner!!), mData.Dinner_Kcal!!))
             }
 
             mCalendar!!.add(Calendar.DATE, 1)
@@ -206,9 +212,9 @@ class MealActivity : AppCompatActivity() {
             val schulCrseScCode = "4" // 학교 종류 코드 1
             val schulKndScCode = "04" // 학교 종류 코드 2
 
-            val year = Integer.toString(params[0]!!)
-            var month = Integer.toString(params[1]!! + 1)
-            var day = Integer.toString(params[2]!!)
+            val year = (params[0]!!).toString()
+            var month = (params[1]!! + 1).toString()
+            var day = (params[2]!!).toString()
 
             if (month.length <= 1)
                 month = "0$month"
@@ -260,16 +266,11 @@ class MealActivity : AppCompatActivity() {
 
     override fun onBackPressed() {
 
-        SweetAlertDialog(this, SweetAlertDialog.WARNING_TYPE)
-                .setTitleText("Are you sure?")
-                .setContentText("Are you sure you want to quit the app?")
-                .setCancelText("No")
-                .setCancelClickListener(null)
-                .setConfirmText("Yes")
-                .setConfirmClickListener { sDialog ->
-                    sDialog.dismissWithAnimation()
-                    finish()
-                }
-                .show()
+        if(System.currentTimeMillis() - lastTimeBackPressed < 1500){
+            finish()
+            return
+        }
+        lastTimeBackPressed = System.currentTimeMillis()
+        Toast.makeText(this,"'뒤로' 버튼을 한 번 더 누르면 종료됩니다.", Toast.LENGTH_SHORT).show()
     }
 }

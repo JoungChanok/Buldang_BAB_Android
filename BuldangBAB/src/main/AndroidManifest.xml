@@ -17,19 +17,20 @@
         tools:ignore="GoogleAppIndexingWarning"
         tools:replace="android:icon,android:label">
 
-        <activity android:name=".Splash.SplashActivity"
-            android:theme="@style/AppCompat.Splash">
+        <activity android:name=".SplashActivity"
+            android:theme="@style/AppCompat.Splash"
+            android:configChanges="uiMode">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <!-- 월봉밥 -->
         <activity
             android:name=".MealActivity"
             android:label=" BAB."
-            android:theme="@style/AppCompat.NoActionBar">
+            android:configChanges="uiMode"
+            android:theme="@style/AppTheme.NoActionbar">
         </activity>
 
         <meta-data android:name="android.max_aspect" android:value="2.1" />

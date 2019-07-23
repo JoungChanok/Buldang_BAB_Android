@@ -22,7 +22,4 @@ public class Preference {
         mEditor.putString(key, value).commit();
     }
 
-    void remove(String key) {
-        mEditor.remove(key).commit();
-    }
 }

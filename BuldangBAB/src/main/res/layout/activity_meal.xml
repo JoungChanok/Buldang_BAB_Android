@@ -17,40 +17,40 @@
             android:id="@+id/mToolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="#242424"
-            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-            app:titleTextColor="@color/white"
-            app:elevation="0dp"/>
+            android:background="@color/background"
+            android:theme="@style/ThemeOverlay.MaterialComponents.ActionBar"
+            app:elevation="0dp"
+            app:titleTextColor="@color/textColor" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/background"
         android:orientation="vertical"
-        android:background="#242424"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
         tools:context=".MealActivity"
         tools:ignore="MissingPrefix"
-        tools:showIn="@layout/activity_meal"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        tools:showIn="@layout/activity_meal">
 
         <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
             android:id="@+id/mSwipeRefreshLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#242424">
+            android:background="@color/background">
 
             <androidx.core.widget.NestedScrollView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:fillViewport="true">
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/mRecyclerView"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scrollbars="vertical"
-                app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/mRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="vertical"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
             </androidx.core.widget.NestedScrollView>
 
@@ -65,11 +65,11 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         app:fabBackgroundTint="#ffffff"
-        app:fabDrawableTint="#242424"
+        app:fabDrawableTint="@color/today"
         app:fabGravity="bottom_end"
         app:fabMenu="@menu/fab_menu"
         app:miniFabBackgroundTint="#ffffff"
-        app:miniFabDrawableTint="#242424"
-        app:miniFabTitleTextColor="#242424" />
+        app:miniFabDrawableTint="@color/today"
+        app:miniFabTitleTextColor="@color/today" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

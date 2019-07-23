@@ -61,9 +61,9 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
-                        android:textSize="15sp"
                         android:gravity="end"
                         android:paddingEnd="15dp"
+                        android:textSize="15sp"
                         tools:ignore="RelativeOverlap,RtlSymmetry" />
 
                     <TextView
@@ -91,7 +91,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:foreground="?attr/selectableItemBackground"
-                card_view:cardCornerRadius="10dp"
+                card_view:cardCornerRadius="16dp"
                 card_view:cardElevation="8dp"
                 card_view:cardPreventCornerOverlap="false"
                 card_view:cardUseCompatPadding="true">
@@ -149,7 +149,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:foreground="?attr/selectableItemBackground"
-                card_view:cardCornerRadius="10dp"
+                card_view:cardCornerRadius="16dp"
                 card_view:cardElevation="8dp"
                 card_view:cardPreventCornerOverlap="false"
                 card_view:cardUseCompatPadding="true">

@@ -5,19 +5,14 @@ package kr.oklabs.meal
 
 import android.annotation.SuppressLint
 import android.content.Context
-import android.content.Intent
-import androidx.cardview.widget.CardView
-import androidx.recyclerview.widget.RecyclerView
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-
+import androidx.cardview.widget.CardView
+import androidx.recyclerview.widget.RecyclerView
 import java.text.SimpleDateFormat
-import java.util.ArrayList
-import java.util.Calendar
-import java.util.GregorianCalendar
-import java.util.Locale
+import java.util.*
 import android.widget.TextView as TextView1
 
 class BapAdapter internal constructor(mListData: ArrayList<BapListData>, mContext: Context) : RecyclerView.Adapter<BapAdapter.BapViewHolder>() {
@@ -82,48 +77,48 @@ class BapAdapter internal constructor(mListData: ArrayList<BapListData>, mContex
                 Holder.Layout2.setCardBackgroundColor(this.mContext!!.resources.getColor(R.color.today_layout_color_dinner))
 
 
-                Holder.Lunch.setTextColor(this.mContext!!.resources.getColor(R.color.colorPrimary))
+                Holder.Lunch.setTextColor(this.mContext!!.resources.getColor(R.color.textColorPrimary))
                 Holder.Lunch.text = this.mContext!!.resources.getText(R.string.today_lunch)
-                Holder.mLunch.setTextColor(this.mContext!!.resources.getColor(R.color.colorPrimary))
-                Holder.Kcal.setTextColor(this.mContext!!.resources.getColor(R.color.colorPrimary))
+                Holder.mLunch.setTextColor(this.mContext!!.resources.getColor(R.color.textColorPrimary))
+                Holder.Kcal.setTextColor(this.mContext!!.resources.getColor(R.color.textColorPrimary))
                 Holder.Kcal.text = this.mContext!!.resources.getText(R.string.today_kcal)
-                Holder.mLunchKcal.setTextColor(this.mContext!!.resources.getColor(R.color.colorPrimary))
+                Holder.mLunchKcal.setTextColor(this.mContext!!.resources.getColor(R.color.textColorPrimary))
 
 
-                Holder.Dinner.setTextColor(this.mContext!!.resources.getColor(R.color.colorPrimary))
+                Holder.Dinner.setTextColor(this.mContext!!.resources.getColor(R.color.today_dinner_text))
                 Holder.Dinner.text = this.mContext!!.resources.getText(R.string.today_dinner)
-                Holder.mDinner.setTextColor(this.mContext!!.resources.getColor(R.color.colorPrimary))
-                Holder.Kcal1.setTextColor(this.mContext!!.resources.getColor(R.color.colorPrimary))
+                Holder.mDinner.setTextColor(this.mContext!!.resources.getColor(R.color.today_dinner_text))
+                Holder.Kcal1.setTextColor(this.mContext!!.resources.getColor(R.color.today_dinner_text))
                 Holder.Kcal1.text = this.mContext!!.resources.getText(R.string.today_kcal)
-                Holder.mDinnerKcal.setTextColor(this.mContext!!.resources.getColor(R.color.colorPrimary))
+                Holder.mDinnerKcal.setTextColor(this.mContext!!.resources.getColor(R.color.today_dinner_text))
 
 
             } else {
-                Holder.Today.setTextColor(this.mContext!!.resources.getColor(R.color.text_highlight))
-                Holder.mCalender.setTextColor(this.mContext!!.resources.getColor(R.color.text_highlight))
-                Holder.mDayOfTheWeek.setTextColor(this.mContext!!.resources.getColor(R.color.text_highlight))
+                Holder.Today.setTextColor(this.mContext!!.resources.getColor(R.color.empty_textColor))
+                Holder.mCalender.setTextColor(this.mContext!!.resources.getColor(R.color.empty_textColor))
+                Holder.mDayOfTheWeek.setTextColor(this.mContext!!.resources.getColor(R.color.empty_textColor))
 
                 Holder.Today.text = this.mContext!!.resources.getText(R.string.not_today)
 
-                Holder.Layout0.setCardBackgroundColor(this.mContext!!.resources.getColor(R.color.colorPrimary))
-                Holder.Layout1.setCardBackgroundColor(this.mContext!!.resources.getColor(R.color.colorPrimary))
-                Holder.Layout2.setCardBackgroundColor(this.mContext!!.resources.getColor(R.color.colorPrimary))
+                Holder.Layout0.setCardBackgroundColor(this.mContext!!.resources.getColor(R.color.empty_layout))
+                Holder.Layout1.setCardBackgroundColor(this.mContext!!.resources.getColor(R.color.empty_layout))
+                Holder.Layout2.setCardBackgroundColor(this.mContext!!.resources.getColor(R.color.empty_layout))
 
 
-                Holder.Lunch.setTextColor(this.mContext!!.resources.getColor(R.color.text_highlight))
+                Holder.Lunch.setTextColor(this.mContext!!.resources.getColor(R.color.empty_textColor))
                 Holder.Lunch.text = this.mContext!!.resources.getText(R.string.today_lunch)
-                Holder.mLunch.setTextColor(this.mContext!!.resources.getColor(R.color.layout_2))
-                Holder.Kcal.setTextColor(this.mContext!!.resources.getColor(R.color.text_highlight))
+                Holder.mLunch.setTextColor(this.mContext!!.resources.getColor(R.color.empty_textColor))
+                Holder.Kcal.setTextColor(this.mContext!!.resources.getColor(R.color.empty_textColor))
                 Holder.Kcal.text = this.mContext!!.resources.getText(R.string.today_kcal)
-                Holder.mLunchKcal.setTextColor(this.mContext!!.resources.getColor(R.color.layout_2))
+                Holder.mLunchKcal.setTextColor(this.mContext!!.resources.getColor(R.color.empty_textColor))
 
 
-                Holder.Dinner.setTextColor(this.mContext!!.resources.getColor(R.color.text_highlight))
+                Holder.Dinner.setTextColor(this.mContext!!.resources.getColor(R.color.empty_textColor))
                 Holder.Dinner.text = this.mContext!!.resources.getText(R.string.today_dinner)
-                Holder.mDinner.setTextColor(this.mContext!!.resources.getColor(R.color.layout_2))
-                Holder.Kcal1.setTextColor(this.mContext!!.resources.getColor(R.color.text_highlight))
+                Holder.mDinner.setTextColor(this.mContext!!.resources.getColor(R.color.empty_textColor))
+                Holder.Kcal1.setTextColor(this.mContext!!.resources.getColor(R.color.empty_textColor))
                 Holder.Kcal1.text = this.mContext!!.resources.getText(R.string.today_kcal)
-                Holder.mDinnerKcal.setTextColor(this.mContext!!.resources.getColor(R.color.layout_2))
+                Holder.mDinnerKcal.setTextColor(this.mContext!!.resources.getColor(R.color.empty_textColor))
 
             }
         } catch (e: Exception) {

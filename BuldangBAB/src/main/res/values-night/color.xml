@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryDark">#121212</color>
+    <color name="colorAccent">#121212</color>
+
+    <color name="fab_primary">#121212</color>
+
+    <color name="taco">#ffffff</color>
+
+    <color name="background">#121212</color>
+
+    <color name="empty_layout">#ffffff</color>
+
+    <color name="white">#FFFFFF</color>
+
+    <color name="today">#26418f</color>
+
+    <color name="mdtp_accent_color">#009688</color>
+    <color name="mdtp_accent_color_dark">#00796b</color>
+
+    //폰트 색상
+    <color name="textColor">#ffffff</color>
+    <color name="textColorPrimary">#242424</color>
+
+    <color name="empty_textColor">#242424</color>
+    <color name="empty_textColorPrimary">#242424</color>
+
+    <color name="text_highlight">#242424</color>
+
+    <color name="today_text_color">#f8fdfc</color>
+
+    <color name="today_layout_color_lunch">#ffffff</color>
+    <color name="today_layout_color_dinner">#5b6abf</color>
+
+    <color name="today_dinner_text">#ffffff</color>
+</resources>

@@ -4,6 +4,6 @@
     android:id="@+id/mToolbar"
     android:layout_width="match_parent"
     android:layout_height="?attr/actionBarSize"
-    android:background="#242424"
+    android:background="@color/background"
     android:theme="@style/AppTheme.ActionBar"
-    app:titleTextColor="@color/white" />
+    app:titleTextColor="@color/textColor" />

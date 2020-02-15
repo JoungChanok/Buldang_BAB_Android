@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/BuldangBAB/BuldangBAB.iml" filepath="$PROJECT_DIR$/BuldangBAB/BuldangBAB.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Buldang_BAB.iml" filepath="$PROJECT_DIR$/Buldang_BAB.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Buldang_BAB_Android.iml" filepath="$PROJECT_DIR$/Buldang_BAB_Android.iml" />
     </modules>
   </component>
 </project>

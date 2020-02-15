@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="Gradle: io.github.yavski:fab-speed-dial:1.0.6@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9b2f7eb7df74eba004df780d053cf1f5/jetified-fab-speed-dial-1.0.6/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9b2f7eb7df74eba004df780d053cf1f5/jetified-fab-speed-dial-1.0.6/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5e557851f3193f04cb3d8f21dede6820/jetified-fab-speed-dial-1.0.6/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5e557851f3193f04cb3d8f21dede6820/jetified-fab-speed-dial-1.0.6/res" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.github.yavski/fab-speed-dial/1.0.6/ecce1a60b7d8523fd5078ad9c47abe375f4ab4ff/fab-speed-dial-1.0.6-javadoc.jar!/" />
